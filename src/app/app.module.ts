@@ -3,16 +3,24 @@ import {BrowserModule} from "@angular/platform-browser";
 
 import {AppRoutingModule} from "./app-routing.module";
 import { AppComponent } from './app.component';
-import {SectionComponent} from "./components/section/section.component";
+import {UserListComponent} from "./components/user-list/user-list.component";
+import {ParseDatePipe} from "./pipe/parse-date.pipe";
+import {SearchBoxComponent} from "./components/search-box/search-box.component";
+import {SearchNamePipe} from "./pipe/search.pipe";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
-    SectionComponent
+    UserListComponent,
+    SearchBoxComponent,
+    ParseDatePipe,
+    SearchNamePipe,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

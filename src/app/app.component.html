@@ -1,6 +1,4 @@
-<h1 [style.color]="selected? selected.color:'black'">{{title}}</h1>
-<app-section
-  *ngFor="let section of sections"
- [section]="section"
- [selected]="section === selected"
- (select)="select($event)"></app-section>
+<div>
+<app-search-box (searchEvent)="handleValueChange($event)"/>
+<app-user-list [userDetails]="users" [search]="searchName"></app-user-list>
+</div>

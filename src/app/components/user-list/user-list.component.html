@@ -1,0 +1,22 @@
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Department</th>
+        <th>Salary</th>
+        <th>Joining Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userDetails | searchName:search">
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.dept}}</td>
+        <td>{{user.salary}}</td>
+        <td>{{user.doj | parseDate}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
